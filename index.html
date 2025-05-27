@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="./src/CSS/style.css">
+    <title>Neos Rain</title>
+</head>
+<body>
+    <main id="container">
+        <div class="login-container">
+                <header>
+                    <h1>Login</h1>
+                </header>
+                <form id="form-login">
+                    <article class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" required />
+                    </article>
+
+                    <article class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" required />
+                    </article>
+
+                    <button type="submit" id="btnEntrar">Entrar</button>
+                    <button id="btnTrocar">Trocar</button>
+                </form>
+                     <div id="message" class="message"></div>
+        </div>
+
+    </main>
+    
+    <!-- JAVASCRITP EXTERNO -->
+    <script src="./src/JS/script.js"></script>
+</body>
+</html>
+

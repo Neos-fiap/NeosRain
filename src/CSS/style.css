@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px solid #333;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.login-container{
+    flex:1;
+    padding: 1px;
+    transition: .5s ease-in-out;
+}
+.login-container{
+    background-image: linear-gradient(aqua, black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+.form-group{
+    margin-bottom: 20px;
+    width: 80%;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+}
+.form-group input[type="text"]
+.form-group input[type="password"]{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
+#btnEntrar{
+    padding: 10px 20px;
+    background: rgb(71, 219, 71);
+    color: black;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btnTrocar{
+        padding: 10px 20px;
+        background-image: linear-gradient(black, aqua);
+        color:#fff;
+        font-weight: 700;
+        border-radius: 10px;
+        cursor: pointer;
+}
+.message{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.message.success{
+    background: #f4f4f4;
+    color: green;
+    border-radius: 1px solid greenyellow;
+}
+.message.error{
+    background: #f4f4f4;
+    color: rgb(128, 0, 0);
+    border-radius: 1px solid greenyellow;
+}
