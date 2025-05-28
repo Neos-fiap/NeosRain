@@ -39,7 +39,7 @@ main {
     background-size: cover;
     height: 92vh;
     display: flex;
-    justify-content: flex-start; /* alterado de flex-end para flex-start */
+    justify-content: flex-end; /* alterado de flex-start para flex-end */
     align-items: flex-start;
 }
 
