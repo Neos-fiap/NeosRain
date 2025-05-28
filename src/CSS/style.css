@@ -1,73 +1,81 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#container{
+body{
     display: flex;
-    width: 80%;
-    height: 500px;
-    margin: 50px auto;
-    border: 1px solid #333;
-    border-radius: 30px;
-    overflow: hidden;
-}
-.login-container{
-    flex:1;
-    padding: 1px;
-    transition: .5s ease-in-out;
-}
-.login-container{
-    background-image: linear-gradient(aqua, black);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    order: 2;
+    min-height: 100vh;
+    background: url(../assets/ImagemExemplo.jpg);
+    background-size: cover;
+    background-position: center;
 }
-.form-group{
-    margin-bottom: 20px;
-    width: 80%;
-}
-.form-group label{
-    display: block;
-    margin-bottom: 10px;
-}
-.form-group input[type="text"]
-.form-group input[type="password"]{
-    width: 200px;
-    padding: 5px;
-    border: 1px solid greenyellow;
+.container{
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
-#btnEntrar{
-    padding: 10px 20px;
-    background: rgb(71, 219, 71);
-    color: black;
-    font-weight: 700;
-    border-radius: 10px;
+.container h1{
+    font-size: 36px;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin:  30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #c5c5c5;
+}
+.input-box i{
+    position: absolute;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+.remember label input{
+    accent-color: #fff;
+    margin-right: 20px;
+}
+.login{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: neno;
+    border-radius: 40px;
     cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 10ox rgba(0, 0, 0, .1);
 }
-#btnTrocar{
-        padding: 10px 20px;
-        background-image: linear-gradient(black, aqua);
-        color:#fff;
-        font-weight: 700;
-        border-radius: 10px;
-        cursor: pointer;
-}
-.message{
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 10px;
-}
-.message.success{
-    background: #f4f4f4;
-    color: green;
-    border-radius: 1px solid greenyellow;
-}
-.message.error{
-    background: #f4f4f4;
-    color: rgb(128, 0, 0);
-    border-radius: 1px solid greenyellow;
+.login:hover{
+    background-color: transparent;
+    border: 2px solidrgba(255, 255, 255, .2);
+    color: #fff;
+    transition: 0.4s;
 }
