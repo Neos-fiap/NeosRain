@@ -192,3 +192,30 @@ body.menu-open .mostrando-produto {
 .mostrando-produto .foco {
     font-weight: bold;
 }
+
+.contando-nos {
+    margin-right: 5vw;
+    margin-top: 5vh;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o conteúdo interno à direita */
+    
+    
+}
+
+.contando-nos h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem; 
+    font-weight: bold;
+}
+
+.contando-nos p {
+    font-size: 2rem;
+}
