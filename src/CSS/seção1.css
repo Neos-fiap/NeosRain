@@ -39,7 +39,7 @@ main {
     background-size: cover;
     height: 92vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start; /* alterado de flex-end para flex-start */
     align-items: flex-start;
 }
 
@@ -142,28 +142,25 @@ body {
 }
 
 .mostrando-produto {
-    margin-right: 5vw;
+    margin-left: 5vw;
     margin-top: 5vh;
-    background: rgba(116, 115, 115, 0.7); /*  fundo cinza translúcido para o texto */
     padding: 2rem;
     border-radius: 12px;
-    max-width: 500px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    color: #23232e;
+    max-width: 1000px;      /* aumenta o espaço do container */
+    width: 100%;
+    color: #ffffff;
     position: relative;
     min-height: 350px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: unset; /* remova align-self */
+    flex-direction: column;   /* <-- imagem embaixo do texto */
+    align-items: flex-start;  /* alinha à esquerda */
+    gap: 3rem;                  /* espaço entre texto e imagem */
 }
-
 
 .mostrando-produto::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.7); /* ajuste a cor e opacidade conforme necessário */
     border-radius: 12px;
     z-index: 0;
 }
@@ -176,3 +173,22 @@ body.menu-open .mostrando-produto {
     display: none !important;
 }
 
+.mostrando-produto h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+
+.mostrando-produto p {
+    font-size: 2rem; 
+}
+
+.mostrando-produto img {
+    max-width: 850px;   /* tamanho máximo da imagem */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mostrando-produto .foco {
+    font-weight: bold;
+}
