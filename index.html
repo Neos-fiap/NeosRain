@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS EXTERNO -->
-    <link rel="stylesheet" href="./src/CSS/style.css">
-    <title>Neos Rain</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <link rel="stylesheet" href="./src/CSS/style.css"
+    <title></title>
+
 </head>
 <body>
-    <main id="container">
-        <div class="login-container">
-                <header>
-                    <h1>Login</h1>
-                </header>
-                <form id="form-login">
-                    <article class="form-group">
-                        <label for="usuario">Usuario</label>
-                        <input type="text" id="usuario" name="usuario" required />
-                    </article>
-
-                    <article class="form-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" required />
-                    </article>
-
-                    <button type="submit" id="btnEntrar">Entrar</button>
-                    <button id="btnTrocar">Trocar</button>
-                </form>
-                     <div id="message" class="message"></div>
+<main class="container" id="login-container">
+    <form id="form-login">
+        <h1>Login Neos Rain</h1>
+        <div class="input-box">
+            <input id="email" placeholder="Usuario" type="email">
+            <i class="bx bxs-user"></i>
         </div>
-
-    </main>
-    
-    <!-- JAVASCRITP EXTERNO -->
-    <script src="./src/JS/script.js"></script>
+        <div class="input-box">
+            <input id="password" placeholder="Senha" type="password">
+            <i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="remember">
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" class="login" id="btnEntrar">Login</button>
+    </form>
+    <div id="message"></div>
+    <button id="btnSair" style="display: none;">Sair</button>
+</main>
+     <script src="./src/JS/script.js"></script>
 </body>
 </html>
-
