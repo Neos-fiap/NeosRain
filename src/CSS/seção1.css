@@ -35,9 +35,12 @@ nav{
 
 /* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
 main {
-    background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
+    background: url("../assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
@@ -130,3 +133,46 @@ main {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
+/* Adicione isso ao final do arquivo para alinhar a section à direita */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mostrando-produto {
+    margin-right: 5vw;
+    margin-top: 5vh;
+    background: rgba(116, 115, 115, 0.7); /*  fundo cinza translúcido para o texto */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #23232e;
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: unset; /* remova align-self */
+}
+
+
+.mostrando-produto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.7); /* ajuste a cor e opacidade conforme necessário */
+    border-radius: 12px;
+    z-index: 0;
+}
+.mostrando-produto > * {
+    position: relative;
+    z-index: 1;
+}
+
+body.menu-open .mostrando-produto {
+    display: none !important;
+}
+
