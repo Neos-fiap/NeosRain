@@ -1,25 +1,29 @@
+/* Resetando as margens e o padding padrão do navegador */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* Estilizando todos os links do site */
 a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
-
 }
 
+/* Efeito de opacidade ao passar o mouse nos links */
 a:hover {
     opacity: 0.7;
 }
 
+/* Logo do menu principal - deixa o texto maior e espaçado */
 .logo {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
+/* Estilização da barra de navegação principal */
 nav{
     display: flex;
     justify-content: space-around;
@@ -29,27 +33,32 @@ nav{
     height: 8vh;
 }
 
+/* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
 main {
-    background: url("../assets/fotoFundoOceano.jpg") no-repeat center center;
+    background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
 }
 
+/* Lista de navegação do menu - deixa os itens em linha */
 .nav-list {
     list-style: none;
     display: flex;
 }
 
+/* Espaçamento e estilização dos itens do menu */
 .nav-list li{
     letter-spacing: 3px;
     margin-left: 32px;
 }
 
+/* Menu hamburguer escondido por padrão (só aparece no mobile) */
 .mobile-menu{
     display: none;
     cursor: pointer;
 }
 
+/* Barrinhas do menu hamburguer */
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -57,10 +66,12 @@ main {
     margin: 8px;
 }
 
+/* Responsividade para telas menores que 900px */
 @media (max-width: 900px){
     body{
         overflow-x: hidden;
     }
+    /* Menu lateral aparece no mobile */
     .nav-list{
         position: absolute;
         top: 8vh;
@@ -75,21 +86,27 @@ main {
         transition: transform 0.3s ease-in;
         display: flex;
     }
+    /* Itens do menu ficam centralizados e invisíveis até o menu abrir */
     .nav-list li{
         margin-left: 0;
         opacity: 0;
     }
+    /* Mostra o menu hamburguer */
     .mobile-menu{
         display: block;
     }
+    /* Quando o menu está ativo, aparece na tela */
     .nav-list.active {
         transform: translateX(0);
     }
+    /* Itens do menu aparecem suavemente */
     .nav-list.active li {
         opacity: 1;
         transition: opacity 0.3s;
     }
 }
+
+/* Animação para os links do menu aparecerem de forma suave */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -101,6 +118,7 @@ main {
   }
 }
 
+/* Animações para o ícone do menu hamburguer virar um X quando ativo */
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
