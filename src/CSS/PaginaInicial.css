@@ -134,8 +134,10 @@ main {
 footer{
    background-color: #23232e;
    color: aliceblue;
-   height: 25px;
+   height: 20px;
    text-align: center;
    padding: 3px;
+   align-items: center;
+   
    
    

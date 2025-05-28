@@ -176,3 +176,12 @@ body.menu-open .mostrando-produto {
     display: none !important;
 }
 
+footer{
+   background-color: #23232e;
+   color: aliceblue;
+   height: 20px;
+   text-align: center;
+   padding: 3px;
+   align-items: center;
+}
+
