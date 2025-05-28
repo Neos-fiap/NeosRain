@@ -76,11 +76,11 @@ main {
     }
     /* Menu lateral aparece no mobile */
     .nav-list{
-        position: absolute;
-        top: 8vh;
+        position: fixed;
+        top: 0;
         right: 0;
         width: 50vw;
-        height: 92vh;   
+        height: 100vh;
         background: #23232e;
         flex-direction: column;     
         align-items: center;
@@ -88,6 +88,7 @@ main {
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         display: flex;
+        z-index: 1000; /* Garante que o menu fique acima do conteúdo */
     }
     /* Itens do menu ficam centralizados e invisíveis até o menu abrir */
     .nav-list li{
@@ -198,24 +199,19 @@ body.menu-open .mostrando-produto {
     margin-top: 5vh;
     padding: 2rem;
     border-radius: 12px;
-    max-width: 600px;
+    max-width: 1000px;      /* aumenta o espaço do container */
     width: 100%;
     color: #ffffff;
     position: relative;
-    min-height: 200px;
+    min-height: 350px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alinha o conteúdo interno à direita */
-    
-    
 }
-
-.contando-nos h1 {
+.contando-nos h1{
+    font-size: 5rem;
     margin-bottom: 1rem;
-    font-size: 5rem; 
     font-weight: bold;
 }
 
-.contando-nos p {
+.contando-nos p{
     font-size: 2rem;
 }
