@@ -38,6 +38,10 @@ main {
     background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
+    display: flex;           /* Adiciona flexbox */
+    flex-direction: row;     /* Deixa os filhos lado a lado */
+    justify-content: space-between; /* Espaço entre os blocos */
+    align-items: flex-start; /* Alinha ao topo */
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
@@ -138,4 +142,76 @@ footer{
    text-align: center;
    padding: 3px;
    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+.impactar{
+    margin-left: 5vw;
+    margin-top: 5vh;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;         /* Ajuste para caber lado a lado */
+    width: auto;
+    color: #ffffff;
+    position: relative;
+    min-height: 350px;
+    display: flex; 
+}
+
+.impactar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    z-index: 0;
+}
+
+.impactar h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;    
+}
+
+.impactar h3{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.impactar p{
+    font-size: 2rem;
+}
+
+.explicando{
+     align-self: flex-start;   /* Alinha ao topo */
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-left: 0;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1000px;         /* Ajuste para caber lado a lado */
+    width: auto;
+    color: #ffffff;
+    position: relative;
+    min-height: 350px;
+    display: flex;
+}
+.explicando h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.explicando h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    
+}
+.explicando p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
