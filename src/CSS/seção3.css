@@ -34,10 +34,20 @@ nav{
 }
 
 /* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main {
+    flex: 1;
     background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
-    height: 92vh;
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
@@ -154,10 +164,10 @@ footer{
 /* Para telas médias (notebook/tablet) */
 @media (max-width: 1200px) {
     .text-box h1 {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
     }
     .text-box h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
     .text-box p, .text-box li {
         font-size: 1.3rem;
