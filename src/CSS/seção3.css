@@ -201,3 +201,8 @@ footer{
 .text-box li {
     margin-bottom: 1.2rem; /* Espaço abaixo de cada elemento */
 }
+.nav-list a.active {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    opacity: 1;
+}
