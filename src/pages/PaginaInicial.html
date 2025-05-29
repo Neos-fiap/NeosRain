@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaginaInicial</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="/src/CSS/paginaInicial.css">  <!-- Chamando o CSS -->
-    <link rel="icon" type="image/png" href="/src/assets/logoNeosTransparenteBranca.png">  <!-- Adicionando a logo -->
+    <link rel="icon" type="image/png" href="/src/assets/logoNeosTransparenteBranca.png" alt="logo da empressa">  <!-- Adicionando a logo -->
 </head>
 <body>
     <!-- <header class="Cabeçalho">
         <div class="container"> -->
         <nav>
             <a class="logo" href="/src/pages/paginaInicial.html">Neos</a>
+            <button id="darkModeToggle"> <!--Botão Dark Mode -->
+                <img src="/src/assets/darkMode.png" alt="dark mode">
+            </button> 
+            <button id="purpleModeToggle"> <!--Botao purple mode  -->
+                <img src="/src/assets/purpleMode.png" alt="purple mode">
+            </button>
+            <button id="brownModeToggle">
+                <img src="/src/assets/brownMode.png" alt="brown mode">
+            </button>
             <div class="mobile-menu">
                 <div class="line1"></div>  <!-- criancao do menu hamburguer -->
                <div class="line2"></div> 
               <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="/src/pages/paginaInicial.html">Menu</a></li>  <!-- Funcionalidade do menu -->
+                <li><a href="/src/pages/paginaInicial.html" class="active">Menu</a></li>  <!-- Funcionalidade do menu -->
                 <li><a href="/src/pages/seção1.html">Quem vamos ajudar</a></li>
                 <li><a href="/src/pages/seção2.html">Nossas tecnologias</a></li>
                 <li><a href="/src/pages/seção3.html">Nossos objetivos</a></li>

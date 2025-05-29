@@ -139,3 +139,100 @@ footer{
    padding: 3px;
    align-items: center;
 }
+.nav-list a.active {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode nav {
+    background-color: #222222 !important;
+}
+
+/* Se quiser, pode escurecer também o menu lateral no mobile */
+@media (max-width: 900px){
+    body.dark-mode .nav-list {
+        background: #000000 !important;
+    }
+}
+nav.dark-mode, footer.dark-mode {
+    background-color: #000000;
+}
+.nav-list a.dark-mode {
+    color: #f1f1f1;
+}
+#darkModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+#darkModeToggle:hover img {
+    background: #e0e0e0;
+}
+
+/* Modo Roxo para o topo */
+body.purple-mode nav {
+    background-color: rgb(28, 0, 46) !important; /* Roxo escuro */
+}
+@media (max-width: 900px){
+    body.purple-mode .nav-list {
+        background:rgb(24, 0, 39) !important;
+    }
+}
+
+#purpleModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+/* Deixe os botões de modo mais próximos */
+#darkModeToggle,
+#purpleModeToggle,
+#brownMode {
+    margin-right: 4px;
+    margin-left: 0;
+    vertical-align: middle;
+    /* Remova margens extras se houver */
+}
+
+nav button {
+    margin: 0 2px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* Modo Marrom para o topo */
+body.brown-mode nav {
+    background-color: #6d4c41 !important; /* Marrom */
+}
+@media (max-width: 900px){
+    body.brown-mode .nav-list {
+        background: #6d4c41 !important;
+    }
+}
+#brownModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}

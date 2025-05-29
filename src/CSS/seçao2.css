@@ -245,3 +245,45 @@ body {
         font-size: 1.8rem;
     }
 }
+
+.nav-list a.active {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    opacity: 1;
+}
+body.dark-mode nav {
+    background-color: #000000 !important;
+}
+@media (max-width: 900px){
+    body.dark-mode .nav-list {
+        background: #000000 !important;
+    }
+}
+body.purple-mode nav {
+    background-color: rgb(28, 0, 46) !important; /* Roxo escuro */
+}
+@media (max-width: 900px){
+    body.purple-mode .nav-list {
+        background:rgb(24, 0, 39) !important;
+    }
+}
+/* Modo Marrom para o topo */
+body.brown-mode nav {
+    background-color: #6d4c41 !important; /* Marrom */
+}
+@media (max-width: 900px){
+    body.brown-mode .nav-list {
+        background: #6d4c41 !important;
+    }
+}
+#brownModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
