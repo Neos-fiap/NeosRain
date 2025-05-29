@@ -188,7 +188,7 @@ body {
 }
 
 .explicando{
-     align-self: flex-start;   /* Alinha ao topo */
+    align-self: flex-start;   /* Alinha ao topo */
     margin-top: 5vh;
     margin-right: 5vw;
     margin-left: 0;
