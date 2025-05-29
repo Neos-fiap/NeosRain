@@ -69,15 +69,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('purpleMode') === 'on') {
         document.body.classList.add('purple-mode');
     }
+    if (localStorage.getItem('brownMode') === 'on') {
+        document.body.classList.add('brown-mode');
+    }
 
     // Botão dark mode
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-            document.body.classList.remove('purple-mode');
+            document.body.classList.remove('purple-mode', 'brown-mode');
             localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'on' : 'off');
             localStorage.setItem('purpleMode', 'off');
+            localStorage.setItem('brownMode', 'off');
         });
     }
 
@@ -86,9 +90,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (purpleModeToggle) {
         purpleModeToggle.addEventListener('click', function() {
             document.body.classList.toggle('purple-mode');
-            document.body.classList.remove('dark-mode');
+            document.body.classList.remove('dark-mode', 'brown-mode');
             localStorage.setItem('purpleMode', document.body.classList.contains('purple-mode') ? 'on' : 'off');
             localStorage.setItem('darkMode', 'off');
+            localStorage.setItem('brownMode', 'off');
+        });
+    }
+
+    // Botão brown mode
+    const brownModeToggle = document.getElementById('brownModeToggle');
+    if (brownModeToggle) {
+        brownModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('brown-mode');
+            document.body.classList.remove('dark-mode', 'purple-mode');
+            localStorage.setItem('brownMode', document.body.classList.contains('brown-mode') ? 'on' : 'off');
+            localStorage.setItem('darkMode', 'off');
+            localStorage.setItem('purpleMode', 'off');
         });
     }
 });

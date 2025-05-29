@@ -147,17 +147,17 @@ footer{
 
 /* Estilos para o modo escuro */
 body.dark-mode nav {
-    background-color: #222 !important;
+    background-color: #222222 !important;
 }
 
 /* Se quiser, pode escurecer também o menu lateral no mobile */
 @media (max-width: 900px){
     body.dark-mode .nav-list {
-        background: #222 !important;
+        background: #000000 !important;
     }
 }
 nav.dark-mode, footer.dark-mode {
-    background-color: #222;
+    background-color: #000000;
 }
 .nav-list a.dark-mode {
     color: #f1f1f1;
@@ -201,7 +201,8 @@ body.purple-mode nav {
 
 /* Deixe os botões de modo mais próximos */
 #darkModeToggle,
-#purpleModeToggle {
+#purpleModeToggle,
+#brownMode {
     margin-right: 4px;
     margin-left: 0;
     vertical-align: middle;
@@ -213,4 +214,25 @@ nav button {
     padding: 0;
     background: none;
     border: none;
+}
+
+/* Modo Marrom para o topo */
+body.brown-mode nav {
+    background-color: #6d4c41 !important; /* Marrom */
+}
+@media (max-width: 900px){
+    body.brown-mode .nav-list {
+        background: #6d4c41 !important;
+    }
+}
+#brownModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
 }
