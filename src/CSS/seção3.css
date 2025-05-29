@@ -184,3 +184,10 @@ footer{
     text-align: left;
    
 }
+
+.text-box h1,
+.text-box h2,
+.text-box p,
+.text-box li {
+    margin-bottom: 1.2rem; /* Espaço abaixo de cada elemento */
+}
