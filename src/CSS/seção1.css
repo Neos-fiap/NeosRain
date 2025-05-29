@@ -135,7 +135,7 @@ main {
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-/* Adicione isso ao final do arquivo para alinhar a section à direita */
+
 body {
     display: flex;
     flex-direction: column;

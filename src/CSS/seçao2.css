@@ -35,9 +35,13 @@ nav{
 
 /* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
 main {
+    display: flex;
+    flex-direction: row;      /* Alinha lado a lado */
+    align-items: flex-start;  /* Alinha ao topo */
+    height: 92vh;
     background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
-    height: 92vh;
+    gap: 2vw;                 /* Espaço entre as seções */
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
@@ -150,7 +154,7 @@ body {
     margin-top: 5vh;
     padding: 2rem;
     border-radius: 12px;
-    max-width: 1000px;      /* aumenta o espaço do container */
+    max-width: 700px;         /* Ajuste para caber lado a lado */
     width: 100%;
     color: #ffffff;
     position: relative;
@@ -189,4 +193,33 @@ body {
 .mostrando-tecnologia .qualidade3 {
     gap: 3rem;
     margin-bottom: 0.5rem;
+}
+
+.defesa {
+    align-self: flex-start;   /* Alinha ao topo */
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-left: 0;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 1000px;         /* Ajuste para caber lado a lado */
+    width: 100%;
+    color: #ffffff;
+    position: relative;
+    min-height: 350px;
+    display: flex;
+}
+
+
+.defesa h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.defesa h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.defesa p{
+    font-size: 2rem;
 }
