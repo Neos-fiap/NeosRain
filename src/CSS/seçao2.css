@@ -259,3 +259,11 @@ body.dark-mode nav {
         background: #222 !important;
     }
 }
+body.purple-mode nav {
+    background-color: rgb(28, 0, 46) !important; /* Roxo escuro */
+}
+@media (max-width: 900px){
+    body.purple-mode .nav-list {
+        background:rgb(24, 0, 39) !important;
+    }
+}

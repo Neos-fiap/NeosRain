@@ -62,17 +62,33 @@ function setDarkMode(enabled) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Dark mode ao carregar a página
+    // Aplica o modo salvo
     if (localStorage.getItem('darkMode') === 'on') {
         document.body.classList.add('dark-mode');
     }
+    if (localStorage.getItem('purpleMode') === 'on') {
+        document.body.classList.add('purple-mode');
+    }
 
-    // Botão dark mode só existe na página inicial
+    // Botão dark mode
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
         darkModeToggle.addEventListener('click', function() {
-            const isDark = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.remove('purple-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'on' : 'off');
+            localStorage.setItem('purpleMode', 'off');
+        });
+    }
+
+    // Botão purple mode
+    const purpleModeToggle = document.getElementById('purpleModeToggle');
+    if (purpleModeToggle) {
+        purpleModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('purple-mode');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('purpleMode', document.body.classList.contains('purple-mode') ? 'on' : 'off');
+            localStorage.setItem('darkMode', 'off');
         });
     }
 });

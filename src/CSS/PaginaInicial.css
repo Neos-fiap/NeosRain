@@ -176,3 +176,41 @@ nav.dark-mode, footer.dark-mode {
 #darkModeToggle:hover img {
     background: #e0e0e0;
 }
+
+/* Modo Roxo para o topo */
+body.purple-mode nav {
+    background-color: rgb(28, 0, 46) !important; /* Roxo escuro */
+}
+@media (max-width: 900px){
+    body.purple-mode .nav-list {
+        background:rgb(24, 0, 39) !important;
+    }
+}
+
+#purpleModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+/* Deixe os botões de modo mais próximos */
+#darkModeToggle,
+#purpleModeToggle {
+    margin-right: 4px;
+    margin-left: 0;
+    vertical-align: middle;
+    /* Remova margens extras se houver */
+}
+
+nav button {
+    margin: 0 2px;
+    padding: 0;
+    background: none;
+    border: none;
+}
