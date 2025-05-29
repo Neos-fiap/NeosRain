@@ -215,3 +215,27 @@ body {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
+/* Estilos específicos para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .impactar h1,
+    .explicando h1 {
+        font-size: 2.5rem;
+    }
+    .impactar p,
+    .explicando p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos específicos para telas menores que 900px */
+@media (max-width: 900px) {
+    .impactar h1,
+    .explicando h1 {
+        font-size: 2.1rem;
+    }
+    .impactar p,
+    .explicando p {
+        font-size: 1.2rem;
+    }
+}

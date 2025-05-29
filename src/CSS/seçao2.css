@@ -224,6 +224,17 @@ body {
 }
 
 /* Estilos específicos para telas menores que 900px */
+@media (max-width: 1200px) {
+    .texto-tecnologia h1,
+    .defesa-texto h1 {
+        font-size: 2.5rem;
+    }
+    .texto-tecnologia p,
+    .defesa-texto p {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 900px) {
     .texto-tecnologia h1,
     .defesa-texto h1 {
