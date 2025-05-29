@@ -144,3 +144,35 @@ footer{
     font-weight: bold;
     opacity: 1;
 }
+
+/* Estilos para o modo escuro */
+body.dark-mode nav {
+    background-color: #222 !important;
+}
+
+/* Se quiser, pode escurecer também o menu lateral no mobile */
+@media (max-width: 900px){
+    body.dark-mode .nav-list {
+        background: #222 !important;
+    }
+}
+nav.dark-mode, footer.dark-mode {
+    background-color: #222;
+}
+.nav-list a.dark-mode {
+    color: #f1f1f1;
+}
+#darkModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+#darkModeToggle:hover img {
+    background: #e0e0e0;
+}

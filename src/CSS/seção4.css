@@ -245,3 +245,11 @@ body {
     font-weight: bold;
     opacity: 1;
 }
+body.dark-mode nav {
+    background-color: #222 !important;
+}
+@media (max-width: 900px){
+    body.dark-mode .nav-list {
+        background: #222 !important;
+    }
+}

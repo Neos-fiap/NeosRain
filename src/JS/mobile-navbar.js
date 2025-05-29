@@ -51,3 +51,28 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+function setDarkMode(enabled) {
+    if (enabled) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', enabled ? 'on' : 'off');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Dark mode ao carregar a página
+    if (localStorage.getItem('darkMode') === 'on') {
+        document.body.classList.add('dark-mode');
+    }
+
+    // Botão dark mode só existe na página inicial
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+        });
+    }
+});
