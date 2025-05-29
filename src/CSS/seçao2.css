@@ -35,13 +35,12 @@ nav{
 
 /* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
 main {
-    display: flex;
-    flex-direction: row;      /* Alinha lado a lado */
-    align-items: flex-start;  /* Alinha ao topo */
-    height: 92vh;
+    flex: 1;
     background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
     background-size: cover;
-    gap: 2vw;                 /* Espaço entre as seções */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
