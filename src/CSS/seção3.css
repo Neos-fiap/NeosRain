@@ -139,3 +139,48 @@ footer{
    padding: 3px;
    align-items: center;
 }
+
+/* Para telas grandes (desktop) */
+.text-box h1 {
+    font-size: 5rem;
+}
+.text-box h2 {
+    font-size: 3rem;
+}
+.text-box p, .text-box li {
+    font-size: 2rem;
+}
+
+/* Para telas médias (notebook/tablet) */
+@media (max-width: 1200px) {
+    .text-box h1 {
+        font-size: 3.5rem;
+    }
+    .text-box h2 {
+        font-size: 2.2rem;
+    }
+    .text-box p, .text-box li {
+        font-size: 1.3rem;
+    }
+}
+
+/* Para telas pequenas (celular) */
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 2rem;
+    }
+    .text-box h2 {
+        font-size: 1.4rem;
+    }
+    .text-box p, .text-box li {
+        font-size: 1rem;
+    }
+}
+
+.text-box {
+    color: #fff;
+    padding: 2rem 3rem;
+    max-width: 700px;
+    text-align: left;
+   
+}
