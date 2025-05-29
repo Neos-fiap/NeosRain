@@ -219,11 +219,11 @@ body {
 @media (max-width: 900px) {
     .mostrando-produto h1,
     .contando-nos h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     .mostrando-produto p,
     .contando-nos p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .mostrando-produto img {
         max-width: 300px;
