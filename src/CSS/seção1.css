@@ -88,7 +88,11 @@ main {
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         display: flex;
-        z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+        z-index: 1000;
+        overflow-y: hidden;
+    }
+    body.menu-open {
+        overflow: hidden !important;
     }
     /* Itens do menu ficam centralizados e invisíveis até o menu abrir */
     .nav-list li{
@@ -166,9 +170,8 @@ body {
     z-index: 0;
 }
 
-body.menu-open .mostrando-produto {
-    display: none !important;
-}
+
+
 
 .mostrando-produto h1 {
     margin-bottom: 1rem;
@@ -210,4 +213,21 @@ body.menu-open .mostrando-produto {
 
 .contando-nos p{
     font-size: 2rem;
+}
+
+/* Estilos específicos para telas menores que 900px */
+@media (max-width: 900px) {
+    .mostrando-produto h1,
+    .contando-nos h1 {
+        font-size: 2.8rem;
+    }
+    .mostrando-produto p,
+    .contando-nos p {
+        font-size: 1.8rem;
+    }
+    .mostrando-produto img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
 }
