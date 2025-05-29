@@ -165,10 +165,6 @@ body {
     border-radius: 12px;
     z-index: 0;
 }
-.mostrando-produto > * {
-    position: relative;
-    z-index: 1;
-}
 
 body.menu-open .mostrando-produto {
     display: none !important;
