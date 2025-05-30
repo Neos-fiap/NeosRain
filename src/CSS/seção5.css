@@ -1,0 +1,213 @@
+/* Resetando as margens e o padding padrão do navegador */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizando todos os links do site */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Efeito de opacidade ao passar o mouse nos links */
+a:hover {
+    opacity: 0.7;
+}
+
+/* Logo do menu principal - deixa o texto maior e espaçado */
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Estilização da barra de navegação principal */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* font-family: adicionar a fonte depois ; */ 
+    background: #23232e;
+    height: 8vh;
+}
+
+/* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
+main {
+    flex: 1;
+    background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Lista de navegação do menu - deixa os itens em linha */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+/* Espaçamento e estilização dos itens do menu */
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* Menu hamburguer escondido por padrão (só aparece no mobile) */
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+/* Barrinhas do menu hamburguer */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+/* Responsividade para telas menores que 900px */
+@media (max-width: 900px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        display: flex;
+        z-index: 1000;
+        overflow-y: hidden; /* Adicione esta linha */
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+        z-index: 1100;
+    }
+    .nav-list.active {
+        transform: translateX(0);
+    }
+    .nav-list.active li {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+}
+
+/* Animação para os links do menu aparecerem de forma suave */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animações para o ícone do menu hamburguer virar um X quando ativo */
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+footer{
+   background-color: #23232e;
+   color: aliceblue;
+   height: 20px;
+   text-align: center;
+   padding: 3px;
+   align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+/* Estilos específicos para telas menores que 900px */
+@media (max-width: 1200px) {
+    .texto-tecnologia h1,
+    .defesa-texto h1 {
+        font-size: 2.5rem;
+    }
+    .texto-tecnologia p,
+    .defesa-texto p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .texto-tecnologia h1,
+    .defesa-texto h1 {
+        font-size: 2.8rem;
+    }
+    .texto-tecnologia p,
+    .defesa-texto p {
+        font-size: 1.8rem;
+    }
+}
+
+.nav-list a.active {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    opacity: 1;
+}
+body.dark-mode nav {
+    background-color: #000000 !important;
+}
+@media (max-width: 900px){
+    body.dark-mode .nav-list {
+        background: #000000 !important;
+    }
+}
+body.purple-mode nav {
+    background-color: rgb(28, 0, 46) !important; /* Roxo escuro */
+}
+@media (max-width: 900px){
+    body.purple-mode .nav-list {
+        background:rgb(24, 0, 39) !important;
+    }
+}
+/* Modo Marrom para o topo */
+body.brown-mode nav {
+    background-color: #6d4c41 !important; /* Marrom */
+}
+@media (max-width: 900px){
+    body.brown-mode .nav-list {
+        background: #6d4c41 !important;
+    }
+}
+#brownModeToggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+    background: transparent;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
