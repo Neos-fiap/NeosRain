@@ -42,12 +42,15 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    z-index: 1;
 }
 
 /* Lista de navegação do menu - deixa os itens em linha */
 .nav-list {
     list-style: none;
     display: flex;
+    z-index: 1000;
 }
 
 /* Espaçamento e estilização dos itens do menu */
