@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(91,30,159,1) 0%, rgba(77,39,182,1) 100%);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Adicionado para melhorar a tipografia */
+}
+
+.app {
+    width: 420px;
+    background-color: rgba(255, 255, 255, 0.9); /* Alterado para melhor legibilidade */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Reduzida espessura da borda */
+    border-radius: 10px;
+    color: #333; /* Cor mais suave que preto puro */
+    padding: 30px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+.app h1 {
+    color: #333;
+    font-size: 25px; /* Corrigido de font-weight para font-size */
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
+    padding-bottom: 20px; /* Reduzido espaço */
+    text-align: center; /* Centralizado */
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px; /* Adicionado espaçamento */
+}
+
+.btn { /* Corrigido de .bnt para .btn */
+    background-color: white;
+    color: #222;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 15px; /* Aumentado padding vertical */
+    margin: 8px 0; /* Ajustado margem */
+    text-align: left;
+    border-radius: 5px; /* Bordas um pouco mais arredondadas */
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px; /* Tamanho de fonte aumentado */
+}
+
+.btn:hover:not([disabled]) {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra no hover */
+}
+
+.next-btn {
+    background-color: #5b1e9f; /* Cor do gradiente */
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: none;
+    padding: 12px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #4d27b6; /* Cor mais clara no hover */
+    transform: translateY(-2px);
+}
+
+.correct {
+    background: #9aeabc;
+    border-color: #4caf50; /* Borda verde para feedback visual */
+}
+
+.incorrect {
+    background: #ff9393;
+    border-color: #f44336; /* Borda vermelha para feedback visual */
+}
+
+.btn:disabled {
+    cursor: not-allowed; /* Cursor indicando que não é clicável */
+    opacity: 0.8; /* Leve transparência */
+}
