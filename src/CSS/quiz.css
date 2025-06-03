@@ -1,7 +1,40 @@
-* {
-    padding: 0;
+*{
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+}
+
+/* Estilizando todos os links do site */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Efeito de opacidade ao passar o mouse nos links */
+a:hover {
+    opacity: 0.7;
+}
+
+/* Logo do menu principal - deixa o texto maior e espaçado */
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+/* Estilização da barra de navegação principal */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #23232e;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 body {
@@ -9,25 +42,38 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgba(91,30,159,1) 0%, rgba(77,39,182,1) 100%);
+    background: linear-gradient(90deg, rgb(17, 48, 184) 0%, rgba(37, 138, 221, 0.377) 100%);
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif; /* Adicionado para melhorar a tipografia */
 }
+/* Lista de navegação do menu - deixa os itens em linha */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+/* Espaçamento e estilização dos itens do menu */
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
 
 .app {
-    width: 420px;
-    background-color: rgba(255, 255, 255, 0.9); /* Alterado para melhor legibilidade */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Reduzida espessura da borda */
+    width: 100%;
+    max-width: 920px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    color: #333; /* Cor mais suave que preto puro */
+    color: #333;
     padding: 30px 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .app h1 {
     color: #333;
-    font-size: 25px; /* Corrigido de font-weight para font-size */
+    font-size: 25px; 
     font-weight: 600;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
     padding-bottom: 20px; /* Reduzido espaço */
@@ -98,4 +144,155 @@ body {
 .btn:disabled {
     cursor: not-allowed; /* Cursor indicando que não é clicável */
     opacity: 0.8; /* Leve transparência */
+}
+
+/* Menu hamburger escondido por padrão */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+/* tela notebook */
+@media (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        display: none;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    .nav-list.active {
+        display: flex;
+        transform: translateX(0);
+    }
+    .nav-list li {
+        margin: 20px 0 0 20px;
+    }
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 16px;
+        z-index: 1100;
+    }
+    .app {
+        width: 100%;
+        max-width: 98vw;
+        padding: 16px 4vw;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+    .app h1 {
+        font-size: 1.3rem;
+        padding-bottom: 10px;
+    }
+    .quiz h2 {
+        font-size: 1.1rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 8px;
+    }
+}
+
+/* tela celular */
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        flex-direction: row;
+        height: 8vh;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+        width: 100vw;
+        z-index: 1000;
+        justify-content: space-between; /* Garante espaçamento entre logo e menu */
+    }
+    .logo {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        display: none; /* <-- Corrija aqui */
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    .nav-list.active {
+        display: flex; /* <-- Só mostra quando ativo */
+        transform: translateX(0);
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 1; /* Sempre visível */
+        transition: opacity 0.3s;
+    }
+    .nav-list.active {
+        transform: translateX(0);
+    }
+    .nav-list.active li {
+        opacity: 1;
+    }
+    .mobile-menu {
+        display: block;
+        position: fixed;   /* Fica sempre no topo direito */
+        right: 20px;
+        top: 16px;
+        z-index: 1100;
+    }
+}
+
+/* Animação para o ícone do menu hamburger virar um X */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
 }

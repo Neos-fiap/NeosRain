@@ -169,5 +169,35 @@ nextButton.addEventListener("click", () => {
         startQuiz();  
     }
 });
+// Menu mobile: fecha ao clicar fora ou em um link
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+// Toggle menu ao clicar no hamburger
+mobileMenu.addEventListener('click', function (e) {
+    navList.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    e.stopPropagation(); // Evita fechar imediatamente ao abrir
+});
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener('click', function (e) {
+    if (
+        navList.classList.contains('active') &&
+        !navList.contains(e.target) &&
+        !mobileMenu.contains(e.target)
+    ) {
+        navList.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    }
+});
+
+// Fecha ao clicar em um link do menu
+navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+        navList.classList.remove('active');
+        mobileMenu.classList.remove('active');
+    });
+});
 
 startQuiz();
