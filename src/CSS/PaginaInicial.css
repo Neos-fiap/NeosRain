@@ -236,3 +236,34 @@ body.brown-mode nav {
     border-radius: 50%;
     transition: background 0.3s;
 }
+.titulinho{
+    color: white;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    background-color: transparent;
+    height: 50vh;
+      
+}
+.textoQ{
+    color: white;
+    margin: 0;
+    height: -700vh; /* Altura total da janela */
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;  
+}
+.quiz{
+    color: white;
+}
+.btn-quiz{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;  /* Azul padrão */
+    color: white;
+    text-decoration: none;      /* Remove sublinhado */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
