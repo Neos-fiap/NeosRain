@@ -139,6 +139,12 @@ footer{
    padding: 3px;
    align-items: center;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
 .nav-list a.active {
     border-bottom: 2px solid #fff;
     font-weight: bold;
@@ -236,34 +242,34 @@ body.brown-mode nav {
     border-radius: 50%;
     transition: background 0.3s;
 }
-.titulinho{
-    color: white;
+
+.apresentacao,
+.quiz {
+    margin: 5vh auto;              /* Centraliza horizontalmente */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90vw;                   /* Responsivo */
+    color: #ffffff;
+    position: relative;
+    min-height: 350px;
     display: flex;
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center;     /* Centraliza na vertical */
-    background-color: transparent;
-    height: 50vh;
-      
+    flex-direction: column;
+    align-items: center;           /* Centraliza conteúdo */
+    justify-content: center;       /* Centraliza verticalmente */
+    box-sizing: border-box;
 }
-.textoQ{
-    color: white;
-    margin: 0;
-    height: -700vh; /* Altura total da janela */
-    display: flex;
-    justify-content: center; /* Centraliza na horizontal */
-    align-items: center;  
+
+.apresentacao h1,
+.quiz h3 {
+    margin-bottom: 1rem;
+    font-size: 3rem;               /* Tamanho igual para títulos */
+    font-weight: bold;
+    text-align: center;
 }
-.quiz{
-    color: white;
-}
-.btn-quiz{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;  /* Azul padrão */
-    color: white;
-    text-decoration: none;      /* Remove sublinhado */
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+
+.apresentacao p,
+.quiz p {
+    font-size: 1.5rem;             /* Tamanho igual para textos */
+    text-align: center;
 }
