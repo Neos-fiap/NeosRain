@@ -92,7 +92,7 @@ const questions = [
 ];
 
 const questionsElement = document.getElementById("question");
-const answersButton = document.getElementById("ansers-button");
+const answersButton = document.getElementById("answer-buttons"); // Corrigido aqui
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -170,4 +170,4 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-startQuiz();  
+startQuiz();
