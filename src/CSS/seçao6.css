@@ -10,3 +10,25 @@ a{
     text-decoration: none;
     transition: 0.3s;
 }
+ 
+/*efeito de opacidade ao passar o mouse*/
+a:hover{
+    opacity: 0.7;
+}
+
+/*logo menu principal e tamanho de letras com espaço*/
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/*barra de navegacqão principal, estlização*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*adicionar font-famili*/
+    background:#23232e;
+}
+
