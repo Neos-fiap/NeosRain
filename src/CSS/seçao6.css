@@ -30,5 +30,31 @@ nav{
     align-items: center;
     /*adicionar font-famili*/
     background:#23232e;
+    height: 8vh;
 }
 
+/* Lista de navegação do menu - deixa os itens em linha */
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+/* Espaçamento e estilização dos itens do menu */
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* Menu hamburguer escondido por padrão (só aparece no mobile) */
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+/* Barrinhas do menu hamburguer */
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
