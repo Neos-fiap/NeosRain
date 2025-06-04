@@ -1,0 +1,12 @@
+/*resetando margens e preenchimentos*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* estilizando botões das sessões*/
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
