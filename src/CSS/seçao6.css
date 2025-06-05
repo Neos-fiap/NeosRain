@@ -70,3 +70,21 @@ main {
     height: 100vh;
     
 }
+/*Titulo da seção*/
+main section div h1{
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    padding: 20px;
+}
+
+/*Texto descritivo abaixo do titulo*/
+main section div p{
+    color: white;
+    font-size: 20px;
+    text-align:;
+    width: 50%;
+    padding: 30px; 
+}
+
+
