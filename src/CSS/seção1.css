@@ -198,12 +198,15 @@ body {
     margin-top: 5vh;
     padding: 2rem;
     border-radius: 12px;
-    max-width: 1000px;      /* aumenta o espaço do container */
+    max-width: 1000px;
     width: 100%;
     color: #ffffff;
     position: relative;
     min-height: 350px;
     display: flex;
+    flex-direction: column;   /* <-- Adicione esta linha */
+    gap: 2rem;                /* Espaço entre os blocos */
+    align-items: flex-start;  /* Alinha à esquerda */
 }
 .contando-nos h1{
     font-size: 5rem;
