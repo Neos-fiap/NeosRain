@@ -33,32 +33,6 @@ nav{
     height: 8vh;
 }
 
-/* Lista de navegação do menu - deixa os itens em linha */
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-/* Espaçamento e estilização dos itens do menu */
-.nav-list li{
-    letter-spacing: 3px;
-    margin-left: 32px;
-}
-
-/* Menu hamburguer escondido por padrão (só aparece no mobile) */
-.mobile-menu{
-    display: none;
-    cursor: pointer;
-}
-
-/* Barrinhas do menu hamburguer */
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-}
-
 /* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
 main {
     flex: 1;
@@ -71,10 +45,10 @@ main {
     
 }
 /*Titulo da seção*/
-main section div h1{
+main section div h1 {
     color: white;
     font-size: 55px;
-    text-align: center;
+    text-align: left; /* Alinha o h1 à esquerda */
     padding: 20px;
 }
 
@@ -82,7 +56,7 @@ main section div h1{
 main section div p{
     color: white;
     font-size: 20px;
-    text-align:left;
+    text-align: left; /* Alinha o p à esquerda */
     width: 50%;
     padding: 30px; 
 }
@@ -192,24 +166,33 @@ body {
 }
 
 .mostrando-impacto{
-    margin-left: 5vw;
+    /* margin-left: 5vw; */ /* Remova ou comente esta linha */
     margin-top: 5vh;
     padding: 2rem;
     border-radius: 12px;
-    max-width: 100%;         /* Ajuste para caber lado a lado */
-    width: auto;
+    max-width: 100%;
+    width: 100%; /* Garante que ocupe toda a largura */
     color: #ffffff;
     position: relative;
     min-height: 350px;
-    display: flex; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .mostrando-impacto h1{
     margin-bottom: 1rem;
     font-size: 5rem;
+    margin-right: 0; /* Garante que o h1 encoste na borda */
 }
 
 .mostrando-impacto p{
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.texto-impacto {
+    text-align: left; /* Alinha todo o conteúdo à esquerda */
+    width: 100%;
+    padding-right: 0; /* Garante que não haja espaço extra à direita */
 }
 
 /* Para telas médias (notebook/tablet) */
