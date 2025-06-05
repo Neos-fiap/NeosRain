@@ -58,3 +58,15 @@ nav{
     background: #fff;
     margin: 8px;
 }
+
+/* Fundo principal da página, com imagem centralizada e cobrindo toda a área */
+main {
+    flex: 1;
+    background: url("/src/assets/fotoFundoOceano.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    
+}
