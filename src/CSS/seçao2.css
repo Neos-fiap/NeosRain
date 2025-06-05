@@ -287,3 +287,23 @@ body.brown-mode nav {
     border-radius: 50%;
     transition: background 0.3s;
 }
+.tabela-simulacao {
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.tabela-simulacao th, .tabela-simulacao td {
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+.tabela-simulacao th {
+    background: rgba(255,255,255,0.15);
+    font-weight: bold;
+}
