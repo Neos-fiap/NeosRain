@@ -190,16 +190,38 @@ footer{
 .text-box {
     color: #fff;
     padding: 2rem 3rem;
-    max-width: 700px;
+    max-width: 900px;
     text-align: left;
-   
+    font-size: 1.35rem; /* Tamanho base maior para todo o texto */
+    line-height: 1.6;
 }
 
-.text-box h1,
-.text-box h2,
-.text-box p,
-.text-box li {
-    margin-bottom: 1.2rem; /* Espaço abaixo de cada elemento */
+.text-box h1 {
+    font-size: 3rem; /* Título principal */
+    margin-bottom: 1.2rem;
+}
+
+.text-box h3 {
+    font-size: 1.5rem; /* Subtítulos */
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+.text-box ul, .text-box li {
+    font-size: 1.35rem; /* Mesma base do texto */
+    margin-bottom: 1rem;
+}
+
+/* Remova ou ajuste media queries que diminuem muito a fonte em telas menores */
+@media (max-width: 1200px) {
+    .text-box h1 { font-size: 2.2rem; }
+    .text-box h3 { font-size: 1.2rem; }
+    .text-box ul, .text-box li { font-size: 1.1rem; }
+}
+@media (max-width: 768px) {
+    .text-box { font-size: 1rem; }
+    .text-box h1 { font-size: 1.5rem; }
+    .text-box h3 { font-size: 1rem; }
 }
 .nav-list a.active {
     border-bottom: 2px solid #fff;
