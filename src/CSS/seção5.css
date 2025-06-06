@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 /* Resetando as margens e o padding padrão do navegador */
 *{
     margin: 0;
@@ -224,6 +226,7 @@ body.brown-mode nav {
     display: flex;
     flex-direction: column; /* Adicione esta linha */
     align-items: flex-start; /* Garante alinhamento à esquerda */
+    font-family: 'Playfair Display', serif;
 }
 
 .beneficios::before {

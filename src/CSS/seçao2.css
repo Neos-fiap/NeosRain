@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 /* Resetando as margens e o padding padrão do navegador */
 *{
     margin: 0;
@@ -141,6 +143,7 @@ footer{
 }
 
 body {
+    font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
